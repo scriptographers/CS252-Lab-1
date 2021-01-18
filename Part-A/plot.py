@@ -19,7 +19,7 @@ print(df["rssi"][mask].describe())
 ax.set(
     xlabel = "Time (s)", 
     ylabel = "RSRP (dBm)", 
-    title = "RSRP Variation at a Fixed Location"
+    title = "RSRP Variation over the path"
 )
 
 plt.savefig("plots/part_a.jpg", dpi = 150)
