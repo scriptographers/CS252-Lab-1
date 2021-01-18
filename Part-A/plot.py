@@ -1,0 +1,26 @@
+import pandas as pd
+import seaborn as sns
+from matplotlib import pyplot as plt 
+
+sns.set_theme()
+sns.set(rc={'figure.figsize':(11.7,8.27)})
+
+path = "part_a.csv"
+df = pd.read_csv(path, delimiter = ";")
+
+mask = df["rssi"] <= 0
+
+ax = sns.lineplot(
+    x = df["report"], 
+    y = df["rssi"][mask],
+)
+
+print(df["rssi"][mask].describe())
+
+ax.set(
+    xlabel = "Time (s)", 
+    ylabel = "RSRP (dBm)", 
+    title = "RSRP Variation at a Fixed Location"
+)
+
+plt.savefig("plots/part_a.jpg", dpi = 150)
