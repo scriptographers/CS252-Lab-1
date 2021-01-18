@@ -3,7 +3,6 @@ import seaborn as sns
 from matplotlib import pyplot as plt 
 
 sns.set_theme()
-sns.set(rc={'figure.figsize':(11.7,8.27)})
 
 path = "part_a.csv"
 df = pd.read_csv(path, delimiter = ";")
