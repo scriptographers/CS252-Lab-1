@@ -12,6 +12,8 @@ ax = sns.lineplot(
     y = df["rssi"],
 )
 
+print(df["rssi"].describe())
+
 ax.set(
     xlabel = "Time (s)", 
     ylabel = "RSRP (dBm)", 
